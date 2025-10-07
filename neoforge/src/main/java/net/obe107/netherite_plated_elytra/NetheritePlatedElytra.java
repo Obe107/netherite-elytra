@@ -13,6 +13,7 @@ import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.obe107.netherite_plated_elytra.item.ModItems;
 
 @Mod(Constants.MOD_ID)
@@ -23,7 +24,7 @@ public class NetheritePlatedElytra {
     public NetheritePlatedElytra(IEventBus eventBus) {
 
         NeoForge.EVENT_BUS.register(this);
-        NeoForge.EVENT_BUS.addListener(this::addCreative);
+        eventBus.addListener(this::addCreative);
 
         ModItems.register(eventBus);
 
@@ -34,6 +35,10 @@ public class NetheritePlatedElytra {
     }
 
     @SubscribeEvent
+    public void onServerStarting(ServerStartingEvent event) {
+
+    }
+
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.NETHERITE_ELYTRA);
