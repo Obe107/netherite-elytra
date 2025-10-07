@@ -16,7 +16,10 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.example.examplemod.ExampleMod"
+            "net.obe107.netherite_plated_elytra.NetheritePlatedElytra"
+        ],
+        "client": [
+            "net.obe107.netherite_plated_elytra.NetheritePlatedElytra"
         ]
     },
     "mixins": [
@@ -26,7 +29,7 @@
     "depends": {
         "fabricloader": ">=${fabric_loader_version}",
         "fabric-api": "*",
-        "minecraft": "~${minecraft_version}",
+        "minecraft": "${minecraft_version}",
         "java": ">=${java_version}"
     },
     "suggests": {
