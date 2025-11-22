@@ -23,6 +23,7 @@ Crafted in a Smithing Table using:
 
 ### 🔽 Download
 CurseForge Link: https://www.curseforge.com/minecraft/mc-mods/netherite-plated-elytra
+
 CurseForge Profile: https://www.curseforge.com/members/obelia/projects
 
 ### ❓ Future improvements
