@@ -1,3 +1,6 @@
+Netherite Plated Elytra is a Minecraft mod that adds a new upgraded version of the standard Elytra with netherite-level durability, fire resistance, and armor.
+The mod is lightweight, compatible with multiple loaders (Fabric / NeoForge), and designed to integrate seamlessly with existing modpacks.
+
 ### 🔥 Features
 
 🦅 New Item: Netherite Plated Elytra:
@@ -33,3 +36,12 @@ CurseForge Profile: https://www.curseforge.com/members/obelia/projects
 
 ### 📷 Screenshots
 ![Screenshot](https://github.com/user-attachments/assets/996537d4-0a7d-4faf-b959-59347de04b41)
+
+## 🛠️ Technologies Used
+- Java  
+- Gradle (Multiloader Template)  
+- IntelliJ IDEA  
+- Minecraft NeoForge / Fabric APIs  
+- Git & GitHub  
+- JSON (config files)  
+
