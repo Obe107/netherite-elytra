@@ -1,3 +1,5 @@
 {
-  "item.netherite_plated_elytra.netherite_elytra": "Netherite Plated Elytra"
+  "item.netherite_plated_elytra.netherite_elytra": "Netherite Plated Elytra",
+  "advancement.netherite_plated_elytra.get_netherite_elytra.title": "Heavy Metal Wings",
+  "advancement.netherite_plated_elytra.get_netherite_elytra.description": "Obtain a Netherite Plated Elytra"
 }

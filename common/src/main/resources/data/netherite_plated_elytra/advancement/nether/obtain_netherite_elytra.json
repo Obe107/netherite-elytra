@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:nether/root",
+  "display": {
+    "icon": {
+      "id": "netherite_plated_elytra:netherite_elytra"
+    },
+    "title": {
+      "translate": "advancement.netherite_plated_elytra.get_netherite_elytra.title"
+    },
+    "description": {
+      "translate": "advancement.netherite_plated_elytra.get_netherite_elytra.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "got_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "netherite_plated_elytra:netherite_elytra"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 400
+  }
+}
