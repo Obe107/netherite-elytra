@@ -1,14 +1,23 @@
 package net.obe107.netherite_plated_elytra.item;
 
-import com.mojang.datafixers.util.Unit;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.util.Unit;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.component.DamageResistant;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
+import net.minecraft.world.item.equipment.EquipmentAssets;
+import net.minecraft.world.item.equipment.Equippable;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -18,10 +27,12 @@ import net.obe107.netherite_plated_elytra.NetheritePlatedElytra;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(NetheritePlatedElytra.MOD_ID);
 
-    public static final ResourceLocation ARMOR_MODIFIER_ID = ResourceLocation.fromNamespaceAndPath(NetheritePlatedElytra.MOD_ID, "netherite_elytra_armor");
+    public static final Identifier ARMOR_MODIFIER_ID = Identifier.fromNamespaceAndPath(
+            Constants.MOD_ID, "netherite_elytra_armor");
 
-    public static final DeferredItem<NetheritePlatedElytraItem> NETHERITE_ELYTRA = ITEMS.register("netherite_elytra",
-            () -> new NetheritePlatedElytraItem(new Item.Properties()
+    public static final DeferredItem<NetheritePlatedElytraItem> NETHERITE_ELYTRA = ITEMS.registerItem("netherite_elytra",
+            NetheritePlatedElytraItem::new,
+            props -> props
                     .durability(864)
                     .stacksTo(1)
                     .rarity(Rarity.EPIC)
@@ -43,8 +54,7 @@ public class ModItems {
                                                     AttributeModifier.Operation.ADD_VALUE),
                                             EquipmentSlotGroup.CHEST)
                                     .build())
-            ));
-
+    );
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
