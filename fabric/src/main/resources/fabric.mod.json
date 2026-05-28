@@ -22,10 +22,7 @@
             "net.obe107.netherite_plated_elytra.NetheritePlatedElytra"
         ]
     },
-    "mixins": [
-        "${mod_id}.mixins.json",
-        "${mod_id}.fabric.mixins.json"
-    ],
+    "mixins": [],
     "depends": {
         "fabricloader": ">=${fabric_loader_version}",
         "fabric-api": "*",

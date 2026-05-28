@@ -1,5 +1,6 @@
 package net.obe107.netherite_plated_elytra.item;
 
+import com.mojang.datafixers.util.Unit;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -11,6 +12,7 @@ import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.obe107.netherite_plated_elytra.Constants;
 import net.obe107.netherite_plated_elytra.NetheritePlatedElytra;
 
 public class ModItems {
@@ -22,8 +24,17 @@ public class ModItems {
             () -> new NetheritePlatedElytraItem(new Item.Properties()
                     .durability(864)
                     .stacksTo(1)
-                    .fireResistant()
                     .rarity(Rarity.EPIC)
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_FIRE))
+                    .component(DataComponents.GLIDER, Unit.INSTANCE)
+                    .component(DataComponents.EQUIPPABLE,
+                            Equippable.builder(EquipmentSlot.CHEST)
+                                    .setEquipSound(SoundEvents.ARMOR_EQUIP_ELYTRA)
+                                    .setDamageOnHurt(false)
+                                    .setAsset(ResourceKey.create(EquipmentAssets.ROOT_ID, Identifier.fromNamespaceAndPath(Constants.MOD_ID, "netherite_elytra")))
+                                    .build())
+
+                    .repairable(Items.PHANTOM_MEMBRANE)
                     .component(DataComponents.ATTRIBUTE_MODIFIERS,
                             ItemAttributeModifiers.builder()
                                     .add(Attributes.ARMOR,
