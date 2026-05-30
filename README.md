@@ -21,13 +21,10 @@ Crafted in a Smithing Table using:
 
 ### 📦 Compatibility
 - [Elytra Trims](https://www.curseforge.com/minecraft/mc-mods/elytra-trims)
-- [Enderscape](https://www.curseforge.com/minecraft/mc-mods/enderscape)
-- [Elytra Physics](https://www.curseforge.com/minecraft/mc-mods/elytra-physics) (Add "net.obe107.netherite_plated_elytra.NetheritePlatedElytraLayer" to the inject_layers list in the mods config)
+- [Elytra Physics](https://www.curseforge.com/minecraft/mc-mods/elytra-physics)
 
 ### 🔽 Download
 CurseForge Link: https://www.curseforge.com/minecraft/mc-mods/netherite-plated-elytra
-
-CurseForge Profile: https://www.curseforge.com/members/obelia/projects
 
 ### ❓ Future improvements
 
@@ -35,7 +32,7 @@ CurseForge Profile: https://www.curseforge.com/members/obelia/projects
 - Compatibility with other similar mods
 
 ### 📷 Screenshots
-![Screenshot](https://github.com/user-attachments/assets/996537d4-0a7d-4faf-b959-59347de04b41)
+<img width="1920" height="1017" alt="2026-05-29_18 34 33" src="https://github.com/user-attachments/assets/8f6e72e0-f6ae-4396-b00d-e37d63d74073" />
 
 ## 🛠️ Technologies Used
 - Java  
@@ -43,5 +40,5 @@ CurseForge Profile: https://www.curseforge.com/members/obelia/projects
 - IntelliJ IDEA  
 - Minecraft NeoForge / Fabric APIs  
 - Git & GitHub  
-- JSON (config files)  
+- JSON
 
